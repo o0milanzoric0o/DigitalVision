@@ -4,12 +4,15 @@ import android.app.Fragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.NetworkImageView;
+
+import java.io.UnsupportedEncodingException;
 
 import rs.digitalvision.digitalvision.R;
 import rs.digitalvision.digitalvision.models.Elements;
@@ -77,8 +80,21 @@ public class ArticleFragment extends Fragment {
         networkImageView = (NetworkImageView) view.findViewById(R.id.img_networkImageView);
 
         tvPrice.setText(article.getCenafullString());
-        tvAvailable.setText(String.valueOf(article.getArtikalStanje()));
-        tvDescription.setText(article.getArtikalKratakOpis());
+        int available = article.getArtikalStanje();
+        if (available > 0)
+            tvAvailable.setText(getString(R.string.available));
+        else
+            tvAvailable.setText(getString(R.string.non_available));
+
+        String base64 = article.getArtikalKratakOpis();
+        byte[] data = Base64.decode(base64, Base64.DEFAULT);
+        String text = "";
+        try {
+            text = new String(data, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        tvDescription.setText(text);
         networkImageView.setImageUrl(article.getSlika(), VolleySingleton.getsInstance(getActivity()).getImageLoader());
 
 

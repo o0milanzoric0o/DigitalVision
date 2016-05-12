@@ -4,8 +4,9 @@
     <string name="enter_article_code_hint">Unesite šifru proizvoda</string>
     <string name="article_code_size_error_msg">Šifra mora imati bar 2 karaktera!</string>
     <string name="internet_access_fail">Proverite Internet konekciju!</string>
+    <string name="article_code_fail">Ne postoji artikal sa datom šifrom!</string>
     <string name="btn_submit">Pronađi</string>
+    <string name="available">IMA</string>
+    <string name="non_available">NEMA</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
