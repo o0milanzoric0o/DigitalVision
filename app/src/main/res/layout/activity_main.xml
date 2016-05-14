@@ -1,46 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment_container"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
-    tools:context="rs.digitalvision.digitalvision.MainActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/til_article_code"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
-
-            <EditText
-                android:id="@+id/et_article_code"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_article_code_hint"
-                android:inputType="textCapCharacters"
-                android:maxLength="10"
-                android:singleLine="true" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <Button
-            android:id="@+id/btn_submit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="40dp"
-            android:background="@color/colorPrimaryDark"
-            android:text="@string/btn_submit"
-            android:textColor="#ffffff"
-            android:textSize="18sp" />
-    </LinearLayout>
-</FrameLayout>
+    android:layout_height="match_parent">
+    <fragment android:name="rs.digitalvision.digitalvision.fragments.KeypadFragment"
+        android:id="@+id/keypad"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+    <fragment android:name="rs.digitalvision.digitalvision.fragments.ArticleFragment"
+        android:id="@+id/article_viewer"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+</LinearLayout>

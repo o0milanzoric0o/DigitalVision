@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="KeypadButtonBorderless" parent="android:Widget.DeviceDefault.Button.Borderless">
+        <item name="android:background">@color/colorKeypadBtn</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
 </resources>
