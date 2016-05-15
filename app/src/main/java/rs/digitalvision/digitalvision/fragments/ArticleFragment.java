@@ -24,9 +24,9 @@ public class ArticleFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private Elements article;
     private NetworkImageView networkImageView;
+    private TextView tvTitle;
     private TextView tvPrice;
-    private TextView tvAvailable;
-    private TextView tvDescription;
+    private TextView tvPrice_retail;
 
     public ArticleFragment() {
         // Required empty public constructor
@@ -62,8 +62,8 @@ public class ArticleFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_article, container, false);
         tvPrice = (TextView) view.findViewById(R.id.tv_price);
-        tvAvailable = (TextView) view.findViewById(R.id.tv_available);
-        tvDescription = (TextView) view.findViewById(R.id.tv_description);
+        tvTitle = (TextView) view.findViewById(R.id.tv_title);
+        tvPrice_retail = (TextView) view.findViewById(R.id.tv_price_retail);
         networkImageView = (NetworkImageView) view.findViewById(R.id.img_networkImageView);
         showData();
         return view;
@@ -77,21 +77,23 @@ public class ArticleFragment extends Fragment {
     private void showData(){
         if (article != null) {
             tvPrice.setText(article.getCenafullString());
-            int available = article.getArtikalStanje();
-            if (available > 0)
-                tvAvailable.setText(getString(R.string.available));
-            else
-                tvAvailable.setText(getString(R.string.non_available));
+//            int available = article.getArtikalStanje();
+//            if (available > 0)
+//                tvAvailable.setText(getString(R.string.available));
+//            else
+//                tvAvailable.setText(getString(R.string.non_available));
 
-            String base64 = article.getArtikalKratakOpis();
-            byte[] data = Base64.decode(base64, Base64.DEFAULT);
-            String text = "";
-            try {
-                text = new String(data, "UTF-8");
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
-            }
-            tvDescription.setText(text);
+//            String base64 = article.getArtikalKratakOpis();
+//            byte[] data = Base64.decode(base64, Base64.DEFAULT);
+//            String text = "";
+//            try {
+//                text = new String(data, "UTF-8");
+//            } catch (UnsupportedEncodingException e) {
+//                e.printStackTrace();
+//            }
+//            tvDescription.setText(text);
+            tvTitle.setText(article.getArtikalNaziv());
+            tvPrice_retail.setText(String.valueOf(article.getCenafull()));
             networkImageView.setImageUrl(article.getSlika(), VolleySingleton.getsInstance(getActivity()).getImageLoader());
         }
     }

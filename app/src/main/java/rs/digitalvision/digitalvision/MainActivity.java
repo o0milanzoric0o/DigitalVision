@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import rs.digitalvision.digitalvision.dialogs.ProgressDialogCustom;
 import rs.digitalvision.digitalvision.fragments.ArticleFragment;
 import rs.digitalvision.digitalvision.fragments.KeypadFragment;
 import rs.digitalvision.digitalvision.models.Articles;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements  KeypadFragment.O
     private VolleySingleton mVolleySingleton;
     private Activity mActivity;
     private ArticleFragment mArticleFragment;
+    ProgressDialogCustom progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,10 @@ public class MainActivity extends AppCompatActivity implements  KeypadFragment.O
         mArticleFragment = (ArticleFragment) getFragmentManager().findFragmentById(R.id.article_viewer);
         mVolleySingleton = VolleySingleton.getsInstance(this);
         mActivity = this;
+
+        //setting progressDialog
+        progressDialog = new ProgressDialogCustom(this);
+        progressDialog.setCancelable(false);
     }
 
 
@@ -61,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements  KeypadFragment.O
                 @Override
                 public void webRequestSuccess(boolean success, Articles allArticles) {
                     if (success) {
+                        progressDialog.hideDialog();
                         Elements elements;
                         elements = allArticles.getElements();
                         // Show fragment with downloaded data
@@ -79,10 +86,11 @@ public class MainActivity extends AppCompatActivity implements  KeypadFragment.O
 
                 @Override
                 public void webRequestError(String error) {
-
+                    progressDialog.hideDialog();
                 }
             });
             content.pullList();
+            progressDialog.showDialog("Pretraga...");
         }
     }
 }

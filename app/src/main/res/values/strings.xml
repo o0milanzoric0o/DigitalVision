@@ -5,7 +5,7 @@
     <string name="article_code_size_error_msg">Šifra mora imati bar 2 karaktera!</string>
     <string name="internet_access_fail">Proverite Internet konekciju!</string>
     <string name="article_code_fail">Ne postoji artikal sa datom šifrom!</string>
-    <string name="btn_submit">Pronađi</string>
+    <string name="btn_submit">Pretraga</string>
     <string name="available">IMA</string>
     <string name="non_available">NEMA</string>
 

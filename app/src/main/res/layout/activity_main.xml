@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <fragment android:name="rs.digitalvision.digitalvision.fragments.KeypadFragment"
-        android:id="@+id/keypad"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="match_parent" />
-    <fragment android:name="rs.digitalvision.digitalvision.fragments.ArticleFragment"
-        android:id="@+id/article_viewer"
-        android:layout_weight="2"
-        android:layout_width="0dp"
-        android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/oko_belo">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="CENOVNIK"
+        android:background="@color/colorWhiteTransparent"
+        android:textSize="32sp">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/keypad"
+            android:name="rs.digitalvision.digitalvision.fragments.KeypadFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <fragment
+            android:id="@+id/article_viewer"
+            android:name="rs.digitalvision.digitalvision.fragments.ArticleFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+    </LinearLayout>
+
 </LinearLayout>

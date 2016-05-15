@@ -3,5 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#ff4081</color>
-    <color name="colorKeypadBtn">#AA3F51B5</color>
+    <color name="colorKeypadBtn">#BB3F51B5</color>
+    <color name="colorWhiteTransparent">#BBFFFFFF</color>
+    <color name="colorPrimaryDarkTransparent">#BB303F9F</color>
 </resources>

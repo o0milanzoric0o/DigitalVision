@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhiteTransparent"
     android:orientation="vertical">
 
 
@@ -19,7 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_article_code_hint"
-            android:inputType="textCapCharacters"
+            android:inputType="number"
+            android:focusable="false"
             android:maxLength="10"
             android:singleLine="true" />
 
@@ -165,7 +167,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="30dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimaryDarkTransparent"
         android:text="@string/btn_submit"
         android:textColor="#ffffff"
         android:textSize="18sp" />
