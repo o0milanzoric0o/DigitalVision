@@ -1,14 +1,12 @@
 package rs.digitalvision.digitalvision.fragments;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 
 import rs.digitalvision.digitalvision.R;
@@ -47,19 +45,19 @@ public class KeypadFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_keypad, container, false);
-        ((Button) view.findViewById(R.id.button0)).setOnClickListener(this);
-        ((Button) view.findViewById(R.id.button1)).setOnClickListener(this);
-        ((Button) view.findViewById(R.id.button2)).setOnClickListener(this);
-        ((Button) view.findViewById(R.id.button3)).setOnClickListener(this);
-        ((Button) view.findViewById(R.id.button4)).setOnClickListener(this);
-        ((Button) view.findViewById(R.id.button5)).setOnClickListener(this);
-        ((Button) view.findViewById(R.id.button6)).setOnClickListener(this);
-        ((Button) view.findViewById(R.id.button7)).setOnClickListener(this);
-        ((Button) view.findViewById(R.id.button8)).setOnClickListener(this);
-        ((Button) view.findViewById(R.id.button9)).setOnClickListener(this);
-        ((Button) view.findViewById(R.id.button_backspace)).setOnClickListener(this);
-        ((Button) view.findViewById(R.id.button_clear)).setOnClickListener(this);
-        ((Button) view.findViewById(R.id.btn_submit)).setOnClickListener(this);
+        (view.findViewById(R.id.button0)).setOnClickListener(this);
+        (view.findViewById(R.id.button1)).setOnClickListener(this);
+        (view.findViewById(R.id.button2)).setOnClickListener(this);
+        (view.findViewById(R.id.button3)).setOnClickListener(this);
+        (view.findViewById(R.id.button4)).setOnClickListener(this);
+        (view.findViewById(R.id.button5)).setOnClickListener(this);
+        (view.findViewById(R.id.button6)).setOnClickListener(this);
+        (view.findViewById(R.id.button7)).setOnClickListener(this);
+        (view.findViewById(R.id.button8)).setOnClickListener(this);
+        (view.findViewById(R.id.button9)).setOnClickListener(this);
+        (view.findViewById(R.id.button_backspace)).setOnClickListener(this);
+        (view.findViewById(R.id.button_clear)).setOnClickListener(this);
+        (view.findViewById(R.id.btn_submit)).setOnClickListener(this);
         editText = (EditText) view.findViewById(R.id.et_article_code);
         return view;
     }
@@ -107,6 +105,7 @@ public class KeypadFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.btn_submit:
                 mListener.onKeypadSubmit(code);
+                code = "";
                 break;
             default:
         }

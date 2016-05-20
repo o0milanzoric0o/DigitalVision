@@ -2,7 +2,6 @@ package rs.digitalvision.digitalvision.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,7 @@ import android.widget.TextView;
 
 import com.android.volley.toolbox.NetworkImageView;
 
-import java.io.UnsupportedEncodingException;
+import java.util.Locale;
 
 import rs.digitalvision.digitalvision.R;
 import rs.digitalvision.digitalvision.models.Elements;
@@ -27,6 +26,7 @@ public class ArticleFragment extends Fragment {
     private TextView tvTitle;
     private TextView tvPrice;
     private TextView tvPrice_retail;
+    private TextView tvTitle_caption;
 
     public ArticleFragment() {
         // Required empty public constructor
@@ -63,20 +63,21 @@ public class ArticleFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_article, container, false);
         tvPrice = (TextView) view.findViewById(R.id.tv_price);
         tvTitle = (TextView) view.findViewById(R.id.tv_title);
+        tvTitle_caption = (TextView) view.findViewById(R.id.tv_title_caption);
         tvPrice_retail = (TextView) view.findViewById(R.id.tv_price_retail);
         networkImageView = (NetworkImageView) view.findViewById(R.id.img_networkImageView);
         showData();
         return view;
     }
 
-    public void setElemets(Elements elemets){
+    public void setElemets(Elements elemets) {
         article = elemets;
         showData();
     }
 
-    private void showData(){
+    private void showData() {
         if (article != null) {
-            tvPrice.setText(article.getCenafullString());
+            tvPrice.setText(String.format(Locale.US, "%.2f RSD", article.getCenafullVP() * article.getKurs()));
 //            int available = article.getArtikalStanje();
 //            if (available > 0)
 //                tvAvailable.setText(getString(R.string.available));
@@ -93,7 +94,10 @@ public class ArticleFragment extends Fragment {
 //            }
 //            tvDescription.setText(text);
             tvTitle.setText(article.getArtikalNaziv());
-            tvPrice_retail.setText(String.valueOf(article.getCenafull()));
+            String caption = getString(R.string.article_title) + " (" + article.getArtikalSifra() + ")";
+            tvTitle_caption.setText(caption);
+            tvPrice_retail.setText(String.format(Locale.US, "%.2f RSD", article.getCenafullVP() * article.getKurs() * 1.2));
+            networkImageView.setDefaultImageResId(R.drawable.oko_crno);
             networkImageView.setImageUrl(article.getSlika(), VolleySingleton.getsInstance(getActivity()).getImageLoader());
         }
     }

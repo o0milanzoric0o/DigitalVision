@@ -1,4 +1,3 @@
-
 package rs.digitalvision.digitalvision.models;
 
 import com.google.gson.annotations.Expose;
@@ -6,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-public class Elements implements Serializable{
+public class Elements implements Serializable {
 
     @SerializedName("ArtikalId")
     @Expose
@@ -14,15 +13,21 @@ public class Elements implements Serializable{
     @SerializedName("ArtikalSifra")
     @Expose
     private String ArtikalSifra;
-    @SerializedName("cenafullPdv")
+    @SerializedName("cenafullStringMP")
     @Expose
-    private Integer cenafullPdv;
-    @SerializedName("cenafullString")
+    private String cenafullStringMP;
+    @SerializedName("cenafullMP")
     @Expose
-    private String cenafullString;
-    @SerializedName("cenafull")
+    private Integer cenafullMP;
+    @SerializedName("cenafullStringVP")
     @Expose
-    private Object cenafull;
+    private String cenafullStringVP;
+    @SerializedName("cenafullVP")
+    @Expose
+    private Double cenafullVP;
+    @SerializedName("kurs")
+    @Expose
+    private Double kurs;
     @SerializedName("ArtikalNaziv")
     @Expose
     private String ArtikalNaziv;
@@ -70,360 +75,308 @@ public class Elements implements Serializable{
     private String slika;
 
     /**
-     * 
-     * @return
-     *     The ArtikalId
+     * @return The ArtikalId
      */
     public Integer getArtikalId() {
         return ArtikalId;
     }
 
     /**
-     * 
-     * @param ArtikalId
-     *     The ArtikalId
+     * @param ArtikalId The ArtikalId
      */
     public void setArtikalId(Integer ArtikalId) {
         this.ArtikalId = ArtikalId;
     }
 
     /**
-     * 
-     * @return
-     *     The ArtikalSifra
+     * @return The ArtikalSifra
      */
     public String getArtikalSifra() {
         return ArtikalSifra;
     }
 
     /**
-     * 
-     * @param ArtikalSifra
-     *     The ArtikalSifra
+     * @param ArtikalSifra The ArtikalSifra
      */
     public void setArtikalSifra(String ArtikalSifra) {
         this.ArtikalSifra = ArtikalSifra;
     }
 
     /**
-     * 
-     * @return
-     *     The cenafullPdv
+     * @return The cenafullStringMP
      */
-    public Integer getCenafullPdv() {
-        return cenafullPdv;
+    public String getCenafullStringMP() {
+        return cenafullStringMP;
     }
 
     /**
-     * 
-     * @param cenafullPdv
-     *     The cenafullPdv
+     * @param cenafullStringMP The cenafullStringMP
      */
-    public void setCenafullPdv(Integer cenafullPdv) {
-        this.cenafullPdv = cenafullPdv;
+    public void setCenafullStringMP(String cenafullStringMP) {
+        this.cenafullStringMP = cenafullStringMP;
     }
 
     /**
-     * 
-     * @return
-     *     The cenafullString
+     * @return The cenafullMP
      */
-    public String getCenafullString() {
-        return cenafullString;
+    public Integer getCenafullMP() {
+        return cenafullMP;
     }
 
     /**
-     * 
-     * @param cenafullString
-     *     The cenafullString
+     * @param cenafullMP The cenafullMP
      */
-    public void setCenafullString(String cenafullString) {
-        this.cenafullString = cenafullString;
+    public void setCenafullMP(Integer cenafullMP) {
+        this.cenafullMP = cenafullMP;
     }
 
     /**
-     * 
-     * @return
-     *     The cenafull
+     * @return The cenafullStringVP
      */
-    public Object getCenafull() {
-        return cenafull;
+    public String getCenafullStringVP() {
+        return cenafullStringVP;
     }
 
     /**
-     * 
-     * @param cenafull
-     *     The cenafull
+     * @param cenafullStringVP The cenafullStringVP
      */
-    public void setCenafull(Object cenafull) {
-        this.cenafull = cenafull;
+    public void setCenafullStringVP(String cenafullStringVP) {
+        this.cenafullStringVP = cenafullStringVP;
     }
 
     /**
-     * 
-     * @return
-     *     The ArtikalNaziv
+     * @return The cenafullVP
+     */
+    public Double getCenafullVP() {
+        return cenafullVP;
+    }
+
+    /**
+     * @param cenafullVP The cenafullVP
+     */
+    public void setCenafullVP(Double cenafullVP) {
+        this.cenafullVP = cenafullVP;
+    }
+
+    /**
+     * @return The kurs
+     */
+    public Double getKurs() {
+        return kurs;
+    }
+
+    /**
+     * @param kurs The kurs
+     */
+    public void setKurs(Double kurs) {
+        this.kurs = kurs;
+    }
+
+    /**
+     * @return The ArtikalNaziv
      */
     public String getArtikalNaziv() {
         return ArtikalNaziv;
     }
 
     /**
-     * 
-     * @param ArtikalNaziv
-     *     The ArtikalNaziv
+     * @param ArtikalNaziv The ArtikalNaziv
      */
     public void setArtikalNaziv(String ArtikalNaziv) {
         this.ArtikalNaziv = ArtikalNaziv;
     }
 
     /**
-     * 
-     * @return
-     *     The ArtikalLink
+     * @return The ArtikalLink
      */
     public String getArtikalLink() {
         return ArtikalLink;
     }
 
     /**
-     * 
-     * @param ArtikalLink
-     *     The ArtikalLink
+     * @param ArtikalLink The ArtikalLink
      */
     public void setArtikalLink(String ArtikalLink) {
         this.ArtikalLink = ArtikalLink;
     }
 
     /**
-     * 
-     * @return
-     *     The ArtikalOpis
+     * @return The ArtikalOpis
      */
     public String getArtikalOpis() {
         return ArtikalOpis;
     }
 
     /**
-     * 
-     * @param ArtikalOpis
-     *     The ArtikalOpis
+     * @param ArtikalOpis The ArtikalOpis
      */
     public void setArtikalOpis(String ArtikalOpis) {
         this.ArtikalOpis = ArtikalOpis;
     }
 
     /**
-     * 
-     * @return
-     *     The ArtikalKratakOpis
+     * @return The ArtikalKratakOpis
      */
     public String getArtikalKratakOpis() {
         return ArtikalKratakOpis;
     }
 
     /**
-     * 
-     * @param ArtikalKratakOpis
-     *     The ArtikalKratakOpis
+     * @param ArtikalKratakOpis The ArtikalKratakOpis
      */
     public void setArtikalKratakOpis(String ArtikalKratakOpis) {
         this.ArtikalKratakOpis = ArtikalKratakOpis;
     }
 
     /**
-     * 
-     * @return
-     *     The ArtikalBrendId
+     * @return The ArtikalBrendId
      */
     public Object getArtikalBrendId() {
         return ArtikalBrendId;
     }
 
     /**
-     * 
-     * @param ArtikalBrendId
-     *     The ArtikalBrendId
+     * @param ArtikalBrendId The ArtikalBrendId
      */
     public void setArtikalBrendId(Object ArtikalBrendId) {
         this.ArtikalBrendId = ArtikalBrendId;
     }
 
     /**
-     * 
-     * @return
-     *     The ArtikalProizvodjacId
+     * @return The ArtikalProizvodjacId
      */
     public Integer getArtikalProizvodjacId() {
         return ArtikalProizvodjacId;
     }
 
     /**
-     * 
-     * @param ArtikalProizvodjacId
-     *     The ArtikalProizvodjacId
+     * @param ArtikalProizvodjacId The ArtikalProizvodjacId
      */
     public void setArtikalProizvodjacId(Integer ArtikalProizvodjacId) {
         this.ArtikalProizvodjacId = ArtikalProizvodjacId;
     }
 
     /**
-     * 
-     * @return
-     *     The BrendIme
+     * @return The BrendIme
      */
     public Object getBrendIme() {
         return BrendIme;
     }
 
     /**
-     * 
-     * @param BrendIme
-     *     The BrendIme
+     * @param BrendIme The BrendIme
      */
     public void setBrendIme(Object BrendIme) {
         this.BrendIme = BrendIme;
     }
 
     /**
-     * 
-     * @return
-     *     The BrendLink
+     * @return The BrendLink
      */
     public Object getBrendLink() {
         return BrendLink;
     }
 
     /**
-     * 
-     * @param BrendLink
-     *     The BrendLink
+     * @param BrendLink The BrendLink
      */
     public void setBrendLink(Object BrendLink) {
         this.BrendLink = BrendLink;
     }
 
     /**
-     * 
-     * @return
-     *     The ArtikalVidljivZaMp
+     * @return The ArtikalVidljivZaMp
      */
     public Integer getArtikalVidljivZaMp() {
         return ArtikalVidljivZaMp;
     }
 
     /**
-     * 
-     * @param ArtikalVidljivZaMp
-     *     The ArtikalVidljivZaMp
+     * @param ArtikalVidljivZaMp The ArtikalVidljivZaMp
      */
     public void setArtikalVidljivZaMp(Integer ArtikalVidljivZaMp) {
         this.ArtikalVidljivZaMp = ArtikalVidljivZaMp;
     }
 
     /**
-     * 
-     * @return
-     *     The ArtikalStanje
+     * @return The ArtikalStanje
      */
     public Integer getArtikalStanje() {
         return ArtikalStanje;
     }
 
     /**
-     * 
-     * @param ArtikalStanje
-     *     The ArtikalStanje
+     * @param ArtikalStanje The ArtikalStanje
      */
     public void setArtikalStanje(Integer ArtikalStanje) {
         this.ArtikalStanje = ArtikalStanje;
     }
 
     /**
-     * 
-     * @return
-     *     The ArtikalAktivan
+     * @return The ArtikalAktivan
      */
     public Integer getArtikalAktivan() {
         return ArtikalAktivan;
     }
 
     /**
-     * 
-     * @param ArtikalAktivan
-     *     The ArtikalAktivan
+     * @param ArtikalAktivan The ArtikalAktivan
      */
     public void setArtikalAktivan(Integer ArtikalAktivan) {
         this.ArtikalAktivan = ArtikalAktivan;
     }
 
     /**
-     * 
-     * @return
-     *     The ArtikalPDV
+     * @return The ArtikalPDV
      */
     public Object getArtikalPDV() {
         return ArtikalPDV;
     }
 
     /**
-     * 
-     * @param ArtikalPDV
-     *     The ArtikalPDV
+     * @param ArtikalPDV The ArtikalPDV
      */
     public void setArtikalPDV(Object ArtikalPDV) {
         this.ArtikalPDV = ArtikalPDV;
     }
 
     /**
-     * 
-     * @return
-     *     The Rabat
+     * @return The Rabat
      */
     public Object getRabat() {
         return Rabat;
     }
 
     /**
-     * 
-     * @param Rabat
-     *     The Rabat
+     * @param Rabat The Rabat
      */
     public void setRabat(Object Rabat) {
         this.Rabat = Rabat;
     }
 
     /**
-     * 
-     * @return
-     *     The DodatniPdvKategorije
+     * @return The DodatniPdvKategorije
      */
     public Object getDodatniPdvKategorije() {
         return DodatniPdvKategorije;
     }
 
     /**
-     * 
-     * @param DodatniPdvKategorije
-     *     The DodatniPdvKategorije
+     * @param DodatniPdvKategorije The DodatniPdvKategorije
      */
     public void setDodatniPdvKategorije(Object DodatniPdvKategorije) {
         this.DodatniPdvKategorije = DodatniPdvKategorije;
     }
 
     /**
-     * 
-     * @return
-     *     The slika
+     * @return The slika
      */
     public String getSlika() {
         return slika;
     }
 
     /**
-     * 
-     * @param slika
-     *     The slika
+     * @param slika The slika
      */
     public void setSlika(String slika) {
         this.slika = slika;

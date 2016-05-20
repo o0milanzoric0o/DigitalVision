@@ -3,29 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhiteTransparent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp">
 
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/til_article_code"
+    <EditText
+        android:id="@+id/et_article_code"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="25dp">
-
-        <EditText
-            android:id="@+id/et_article_code"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/enter_article_code_hint"
-            android:inputType="number"
-            android:focusable="false"
-            android:maxLength="10"
-            android:singleLine="true" />
-
-    </android.support.design.widget.TextInputLayout>
+        android:layout_marginTop="0dp"
+        android:background="@drawable/background_rectangle_shape"
+        android:focusable="false"
+        android:hint="@string/enter_article_code_hint"
+        android:inputType="number"
+        android:maxLength="10"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:singleLine="true"
+        android:textSize="@dimen/captions_font_size" />
 
 
     <LinearLayout
@@ -163,12 +163,12 @@
         android:id="@+id/btn_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="0dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:background="@color/colorPrimaryDarkTransparent"
         android:text="@string/btn_submit"
         android:textColor="#ffffff"
-        android:textSize="18sp" />
+        android:textSize="@dimen/captions_font_size" />
 </LinearLayout>
