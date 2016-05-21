@@ -77,7 +77,7 @@ public class ArticleFragment extends Fragment {
 
     private void showData() {
         if (article != null) {
-            tvPrice.setText(String.format(Locale.US, "%.2f RSD", article.getCenafullVP() * article.getKurs()));
+            tvPrice.setText(String.format(Locale.US, "%.2f RSD + PDV", article.getCenafullVP() * article.getKurs()));
 //            int available = article.getArtikalStanje();
 //            if (available > 0)
 //                tvAvailable.setText(getString(R.string.available));
@@ -94,7 +94,7 @@ public class ArticleFragment extends Fragment {
 //            }
 //            tvDescription.setText(text);
             tvTitle.setText(article.getArtikalNaziv());
-            String caption = getString(R.string.article_title) + " (" + article.getArtikalSifra() + ")";
+            String caption = getString(R.string.article_title) + " (šifra " + article.getArtikalSifra() + ")";
             tvTitle_caption.setText(caption);
             tvPrice_retail.setText(String.format(Locale.US, "%.2f RSD", article.getCenafullVP() * article.getKurs() * 1.2));
             networkImageView.setDefaultImageResId(R.drawable.oko_crno);

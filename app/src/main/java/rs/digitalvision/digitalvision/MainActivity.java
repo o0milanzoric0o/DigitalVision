@@ -8,10 +8,13 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.TextViewCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import rs.digitalvision.digitalvision.dialogs.ProgressDialogCustom;
 import rs.digitalvision.digitalvision.fragments.ArticleFragment;
@@ -28,9 +31,11 @@ public class MainActivity extends AppCompatActivity implements  KeypadFragment.O
     private final String jsonRequestTAG = "JSONRequestTAG";
     private EditText editText;
     private Button btnSubmit;
+    private TextView tv_title;
     private VolleySingleton mVolleySingleton;
     private Activity mActivity;
     private ArticleFragment mArticleFragment;
+
     ProgressDialogCustom progressDialog;
 
     @Override
@@ -40,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements  KeypadFragment.O
 
         editText = (EditText) findViewById(R.id.et_article_code);
         btnSubmit = (Button) findViewById(R.id.btn_submit);
+        tv_title = (TextView) findViewById(R.id.tv_price_list);
         mArticleFragment = (ArticleFragment) getFragmentManager().findFragmentById(R.id.article_viewer);
         mVolleySingleton = VolleySingleton.getsInstance(this);
         mActivity = this;

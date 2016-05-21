@@ -25,7 +25,8 @@
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
         android:singleLine="true"
-        android:textSize="@dimen/captions_font_size" />
+        android:textSize="@dimen/captions_font_size"
+        android:textColor="@color/colorBlack" />
 
 
     <LinearLayout
@@ -167,7 +168,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="15dp"
-        android:background="@color/colorPrimaryDarkTransparent"
+        android:background="@color/colorRedAccentTransparent"
         android:text="@string/btn_submit"
         android:textColor="#ffffff"
         android:textSize="@dimen/captions_font_size" />

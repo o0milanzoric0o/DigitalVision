@@ -34,7 +34,8 @@
             android:background="@drawable/background_rectangle_shape"
             android:gravity="center"
             android:singleLine="false"
-            android:textSize="@dimen/captions_font_size" />
+            android:textSize="@dimen/captions_font_size"
+            android:textColor="@color/colorBlack" />
     </RelativeLayout>
 
     <com.android.volley.toolbox.NetworkImageView
@@ -64,7 +65,8 @@
             android:layout_below="@id/tv_vp_caption"
             android:background="@drawable/background_rectangle_shape"
             android:gravity="center"
-            android:textSize="@dimen/captions_font_size" />
+            android:textSize="@dimen/captions_font_size"
+            android:textColor="@color/colorBlack" />
 
         <TextView
             android:id="@+id/tv_mp_caption"
@@ -82,7 +84,8 @@
             android:layout_below="@id/tv_mp_caption"
             android:background="@drawable/background_rectangle_shape"
             android:gravity="center"
-            android:textSize="@dimen/captions_font_size" />
+            android:textSize="@dimen/captions_font_size"
+            android:textColor="@color/colorBlack" />
     </RelativeLayout>
 </LinearLayout>
 

@@ -3,19 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/oko_belo">
+    android:background="@drawable/oko_belo"
+    android:orientation="vertical">
 
 
     <TextView
+        android:id="@+id/tv_price_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorWhiteTransparent"
         android:gravity="center"
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
-        android:text="CENOVNIK"
-        android:background="@color/colorWhiteTransparent"
-        android:textSize="32sp">
+        android:text="C E N O V N I K"
+        android:textColor="@android:color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:typeface="monospace">
 
     </TextView>
 

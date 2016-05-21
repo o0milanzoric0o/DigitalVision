@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#ff1744</color>
+    <color name="colorPrimaryDark">#bbff1744</color>
     <color name="colorAccent">#ff4081</color>
     <color name="colorKeypadBtn">#BB3F51B5</color>
     <color name="colorWhiteTransparent">#BBFFFFFF</color>
     <color name="colorPrimaryDarkTransparent">#BB303F9F</color>
+    <color name="colorRedAccentTransparent">#bbff1744</color>
+    <color name="colorBlack">#000000</color>
 </resources>
