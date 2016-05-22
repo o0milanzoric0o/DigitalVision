@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/oko_belo"
@@ -27,11 +28,21 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <FrameLayout
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        <fragment
+            android:id="@+id/keypad"
+            android:name="rs.digitalvision.digitalvision.fragments.KeypadFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            tools:layout="@layout/fragment_keypad" />
 
+        <fragment
+            android:id="@+id/article_viewer"
+            android:name="rs.digitalvision.digitalvision.fragments.ArticleFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            tools:layout="@layout/fragment_article" />
     </LinearLayout>
 
 </LinearLayout>

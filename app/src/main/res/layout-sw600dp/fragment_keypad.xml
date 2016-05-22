@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhiteTransparent"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp">
+
+    <EditText
+        android:id="@+id/et_article_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/background_rectangle_shape"
+        android:focusable="false"
+        android:hint="@string/enter_article_code_hint"
+        android:inputType="number"
+        android:maxLength="10"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:singleLine="true"
+        android:textSize="@dimen/captions_font_size"
+        android:textColor="@color/colorBlack" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/KeypadButtonBorderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/KeypadButtonBorderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/KeypadButtonBorderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/KeypadButtonBorderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/button5"
+                style="@style/KeypadButtonBorderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/button6"
+                style="@style/KeypadButtonBorderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button7"
+                style="@style/KeypadButtonBorderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/button8"
+                style="@style/KeypadButtonBorderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/button9"
+                style="@style/KeypadButtonBorderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_clear"
+                style="@style/KeypadButtonBorderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Obriši" />
+
+            <Button
+                android:id="@+id/button0"
+                style="@style/KeypadButtonBorderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/button_backspace"
+                style="@style/KeypadButtonBorderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="C" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorRedAccentTransparent"
+        android:text="@string/btn_submit"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/captions_font_size" />
+</LinearLayout>

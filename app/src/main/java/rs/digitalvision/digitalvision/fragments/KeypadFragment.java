@@ -4,6 +4,7 @@ package rs.digitalvision.digitalvision.fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,7 @@ public class KeypadFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        Log.i("LALALA", "ON ATACH WAS CALLED");
         if (context instanceof OnKeypadSubmit) {
             mListener = (OnKeypadSubmit) context;
         } else {
