@@ -12,3 +12,9 @@ http://digitalvision.rs/parametri.php?action=artikalBarkod&br=8600412026777&id=6
 
 http://digitalvision.rs/parametri.php?action=artikliPoKategoriji&id=354
 
+Image
+
+https://github.com/o0milanzoric0o/DigitalVision/blob/master/B5329165-5AA4-4C86-B0F4-DF432FE82309.jpg
+
+Slika ide levo, a 4 polja sa informacijama desno: vp cena (ArtikalVPCena), mp cena (ArtikalVPCena), pozicija (ArtikalPozicijaMagacin), lager (ArtikalStanje)
+
