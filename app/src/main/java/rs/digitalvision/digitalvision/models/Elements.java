@@ -43,9 +43,6 @@ public class Elements implements Serializable {
     @SerializedName("ArtikalBrendId")
     @Expose
     private Object ArtikalBrendId;
-    @SerializedName("ArtikalPozicijaMagacin")
-    @Expose
-    private String ArtikalPozicijaMagacin;
     @SerializedName("ArtikalProizvodjacId")
     @Expose
     private Integer ArtikalProizvodjacId;
@@ -76,6 +73,9 @@ public class Elements implements Serializable {
     @SerializedName("slika")
     @Expose
     private String slika;
+    @SerializedName("ArtikalPozicijaMagacin")
+    @Expose
+    private String ArtikalPozicijaMagacin;
 
     /**
      * @return The ArtikalId

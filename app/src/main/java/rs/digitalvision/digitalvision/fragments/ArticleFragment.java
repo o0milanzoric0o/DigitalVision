@@ -104,7 +104,7 @@ public class ArticleFragment extends Fragment {
             networkImageView.setDefaultImageResId(R.drawable.oko_crno);
             networkImageView.setImageUrl(article.getSlika(), VolleySingleton.getsInstance(getActivity()).getImageLoader());
             tvPosition.setText(article.getArtikalPozicijaMagacin());
-            tvQuantity.setText(article.getArtikalStanje());
+            tvQuantity.setText(article.getArtikalStanje().toString());
         }
     }
 
