@@ -63,13 +63,13 @@ public class ArticleFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_article, container, false);
-        tvPrice = view.findViewById(R.id.tv_price);
-        tvTitle = view.findViewById(R.id.tv_title);
-        tvTitle_caption = view.findViewById(R.id.tv_title_caption);
-        tvPrice_retail = view.findViewById(R.id.tv_price_retail);
-        networkImageView = view.findViewById(R.id.img_networkImageView);
-        tvPosition = view.findViewById(R.id.tv_position);
-        tvQuantity = view.findViewById(R.id.tv_quantity);
+        tvPrice = (TextView) view.findViewById(R.id.tv_price);
+        tvTitle = (TextView) view.findViewById(R.id.tv_title);
+        tvTitle_caption = (TextView) view.findViewById(R.id.tv_title_caption);
+        tvPrice_retail = (TextView) view.findViewById(R.id.tv_price_retail);
+        networkImageView = (NetworkImageView) view.findViewById(R.id.img_networkImageView);
+        tvPosition = (TextView) view.findViewById(R.id.tv_position);
+        tvQuantity = (TextView) view.findViewById(R.id.tv_quantity);
         showData();
         return view;
     }
