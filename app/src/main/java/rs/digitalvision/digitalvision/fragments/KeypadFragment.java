@@ -27,7 +27,6 @@ public class KeypadFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        Log.i("LALALA", "ON ATACH WAS CALLED");
         if (context instanceof OnKeypadSubmit) {
             mListener = (OnKeypadSubmit) context;
         } else {
@@ -60,7 +59,7 @@ public class KeypadFragment extends Fragment implements View.OnClickListener {
         (view.findViewById(R.id.button_backspace)).setOnClickListener(this);
         (view.findViewById(R.id.button_clear)).setOnClickListener(this);
         (view.findViewById(R.id.btn_submit)).setOnClickListener(this);
-        editText = (EditText) view.findViewById(R.id.et_article_code);
+        editText = view.findViewById(R.id.et_article_code);
         return view;
     }
 
@@ -116,7 +115,7 @@ public class KeypadFragment extends Fragment implements View.OnClickListener {
 
     // Container Activity must implement this interface
     public interface OnKeypadSubmit {
-        public void onKeypadSubmit(String code);
+        void onKeypadSubmit(String code);
     }
 
 

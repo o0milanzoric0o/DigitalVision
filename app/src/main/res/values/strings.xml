@@ -14,5 +14,7 @@
     <string name="article_title">Naziv proizvoda:</string>
     <string name="caption_price">Veleprodajna cena:</string>
     <string name="caption_retail_price">Maloprodajna cena:</string>
+    <string name="caption_position">Pozicija u magacinu:</string>
+    <string name="caption_quantity">Stanje:</string>
 
 </resources>
