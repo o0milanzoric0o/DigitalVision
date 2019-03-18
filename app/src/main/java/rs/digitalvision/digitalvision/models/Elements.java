@@ -43,6 +43,9 @@ public class Elements implements Serializable {
     @SerializedName("ArtikalBrendId")
     @Expose
     private Object ArtikalBrendId;
+    @SerializedName("ArtikalPozicijaMagacin")
+    @Expose
+    private String ArtikalPozicijaMagacin;
     @SerializedName("ArtikalProizvodjacId")
     @Expose
     private Integer ArtikalProizvodjacId;
@@ -240,6 +243,14 @@ public class Elements implements Serializable {
      */
     public void setArtikalBrendId(Object ArtikalBrendId) {
         this.ArtikalBrendId = ArtikalBrendId;
+    }
+
+    public String getArtikalPozicijaMagacin() {
+        return ArtikalPozicijaMagacin;
+    }
+
+    public void setArtikalPozicijaMagacin(String artikalPozicijaMagacin) {
+        ArtikalPozicijaMagacin = artikalPozicijaMagacin;
     }
 
     /**
